@@ -76,12 +76,12 @@ Adrian, Raphael und Nils
 
 st.caption(
     """Der Human Modification Index (GHM) ist ein Mass dafür, wie stark menschliche Aktivitäten natürliche Landschaften verändert haben. Er hilft dabei, den Einfluss des Menschen auf verschiedene Ökosysteme weltweit zu verstehen und zu quantifizieren. Ein hoher HMI-Wert weist auf eine intensive menschliche Nutzung hin, wie sie in Städten oder industriellen Gebieten vorkommt. Ein niedriger Wert deutet auf weitgehend natürliche und wenig beeinträchtigte Gebiete hin. 
-Der Index basiert auf Analysen von 13 verschiedenen menschlichen Einflüsse, wie zum Beispiel die Bevölkerungsdichte, die Verkehrsinfrastruktur oder die Energiegewinnung. _[ESSD](https://essd.copernicus.org/articles/12/1953/2020/)_
+Der Index basiert auf Analysen von 8 verschiedenen menschlichen Einflüsse, wie zum Beispiel die Bevölkerungsdichte, die Verkehrsinfrastruktur oder die Energiegewinnung. _[GHM](https://gee-community-catalog.org/projects/ghm/?h=global+human+modification)_
 """
 )
 
 st.image(
-    Image.open("dashboard/img/map.png"), caption="Darstellung GHM in der Schweiz (2015)"
+    Image.open("dashboard/img/map.png"), caption="Darstellung GHM in der Schweiz (2020)"
 )
 st.markdown(
     "Die Karte offenbart eine enorme Bandbreite menschlicher Einflussnahme im Schweizer Landschaftsraum. Während die rötlich markierten Agglomerationen des Mittellands auf stark umgestaltete, dicht besiedelte Gebiete hinweisen, zeigen sich im hochalpinen Süden und in den inneralpinen Tälern tiefblaue Zonen mit minimaler Modifikation. Ein deutlicher Nord-Süd-Gradient sticht hervor: Vom industrialisierten Flachland über die Voralpen bis hin zu weitgehend unbebauten Gebirgsregionen sinkt der Index stetig ab. Auffällig ist zudem, dass selbst innerhalb einzelner Kantone kleinräumig starke Kontraste zwischen intensiv genutzten Talböden und naturnahen Höhenlagen vorkommen. Insgesamt illustriert die Visualisierung, wie dicht bebautes Territorium und unzugängliche Wildnis in der Schweiz auf engstem Raum nebeneinanderliegen."
@@ -129,7 +129,7 @@ ax.grid(True)
 st.pyplot(fig)
 
 st.markdown(
-    "Seit der ersten Erhebung 1990 zeigt der Global Human Modification Index in sämtlichen Teilen der Schweiz einen klaren Aufwärtstrend. Sowohl in städtischen Zentren als auch in abgelegenen Alpentälern nehmen die Werte kontinuierlich zu, getrieben von Infrastruktur­ausbau, Tourismus und verdichteter Besiedlung. Damit rückt selbst bisher wenig verändertes Terrain sukzessive in höhere Einflussklassen auf."
+    "Seit der ersten Erhebung 1990 zeigt der Global Human Modification Index in sämtlichen Teilen der Schweiz einen leichten Aufwärtstrend. Sowohl in städtischen Zentren als auch in abgelegenen Alpentälern nehmen die Werte kontinuierlich zu, getrieben von Infrastruktur­ausbau, Tourismus und verdichteter Besiedlung."
 )
 
 st.divider()
@@ -162,7 +162,7 @@ with s1:
     st.image(img, caption="Stadtflucht")
 
     st.markdown(
-        """Der GHM nimmt im Schnitt um etwa 0,02 zu. Auffallend ist vor allem, dass der Schnitt in den Städten leicht abnimmt, in den Dörfern aber stärker ansteigt. Dies ist nachvollziehbar, da die Bevölkerung in den Städten abnimmt, während ein Grossteil der Bebauung etc. gleich bleibt. Auf dem Land werden hingegen neue Wohnmöglichkeiten geschaffen und vor allem in kleineren Dörfern steigt die Bevölkerungsdichte teilweise massiv an."""
+        """Der GHM nimmt im Schnitt um etwa 0,03 zu. Auffallend ist vor allem, dass der Schnitt in den Städten leicht abnimmt, in den Dörfern aber stärker ansteigt. Dies ist nachvollziehbar, da die Bevölkerung in den Städten abnimmt, während ein Grossteil der Bebauung etc. gleich bleibt. Auf dem Land werden hingegen neue Wohnmöglichkeiten geschaffen und vor allem in kleineren Dörfern steigt die Bevölkerungsdichte teilweise massiv an."""
     )
 
     st.markdown(
@@ -186,11 +186,11 @@ with s2:
         """Wir verwenden das gleiche Modell wie bei der Stadtflucht, kehren diesmal aber das Szenario um, heisst 30% jedes Dorfes wird entfernt und gleichmässig auf die Städte verteilt. Auch hier wieder der Hinweis, dass wir bei der gleichmässigen Verteilung der Zuzüger eine grobe Annahme getätigt haben."""
     )
 
-    img = Image.open("dashboard/img/s2.png")
+    img = Image.open("dashboard/img/s3.png")
     st.image(img, caption="Landflucht")
 
     st.markdown(
-        """Der gesamte GHM sinkt ganz leicht um etwa 0.015 aber Wert in den Städten steigt um etwa 0.02 und sinkt in den Dörfern um 0.02. Auch dies macht Sinn, da die Bevölkerungsdichte in den Städten zunimmt und in den Dörfern abnimmt."""
+        """Der gesamte GHM sinkt ganz leicht um etwa 0.016 aber Wert in den Städten steigt um etwa 0.05 und sinkt in den Dörfern um 0.02. Auch dies macht Sinn, da die Bevölkerungsdichte in den Städten zunimmt und in den Dörfern abnimmt."""
     )
     st.markdown(
         """Aus Sicht der Politischen Ökologie ist auch der Wegzug vom Land in die Stadt – wie ihn unser Modell darstellt – mehr als nur eine demografische Bewegung. Es geht um ungleiche Verteilungen von Raum, Ressourcen und Entscheidungsmacht, die durch solche Wanderungsprozesse verstärkt oder verändert werden."""
@@ -210,7 +210,7 @@ with s3:
         """Im Rahmen dieses Szenarios wurde untersucht, wie sich eine hypothetische gesellschaftliche Entwicklung, konkret eine alternde Bevölkerung (Zunahme von Personen über 65 Jahren und Abnahme von Personen unter 65 Jahren), eine sinkende Geburtenrate (- 30%) und politische Verschiebungen (Zunahme der Parteien, welche von Personen über 65 Jahre vermehrt gewählt werden) – auf den Global Human Modification Index (GHM) auf Gemeindeebene in der Schweiz auswirkt. Dabei sank der durchschnittliche GHM-Wert von 0.63 auf etwa 0.59. """
     )
 
-    img = Image.open("dashboard/img/s3.png")
+    img = Image.open("dashboard/img/s2.png")
     st.image(img, caption="Alternde Gesellschaft")
 
     st.markdown(
@@ -235,9 +235,8 @@ Diese Strategien wirken auf vielen Ebenen – und führen dazu, dass Nachhaltigk
     )
 
     st.markdown(
-        """Der Rückgang des GHM-Werts in diesem Szenario mag auf den ersten Blick positiv erscheinen – als Zeichen für weniger Flächenverbrauch oder geringere Infrastrukturbelastung. Doch genauer betrachtet ist er kein Ausdruck aktiver Umweltpolitik, sondern eine Folge demografisch und politisch bedingter Entwicklung: weniger Bautätigkeit, abnehmende Bevölkerung unter 65, geringerer Innovationsdruck."""
-    )
-
+        """ Der leichte Anstieg des GHM-Werts (+0.01) deutet auf eine stärkere menschliche Modifikation trotz demografischen Wandels hin. Verantwortlich ist weniger eine dynamische Entwicklung als vielmehr eine politisch verfestigte Raumstruktur: Der wachsende Einfluss älterer, immobilienbesitzender Bevölkerungsgruppen führt zu stabilitätsorientierter Planung und hemmt ökologische Innovationen. Der höhere Wert ist somit kein Zeichen aktiver Umweltpolitik, sondern Ausdruck von Beharrung und veränderten Machtverhältnissen.)
+"""   ) 
 with sf:
     st.markdown(
         "Hier können nun eigene Simulationen durchgeführt werden. Dazu kann eine Gemeinde im Dropdown ausgewählt werden und anschliessend die Paramter bearbeitet werden. \n\n Falls Simulationen für eine frei gefunden Gemeinde durchgeführt werden sollen, kann im Dropdown `Freie Gemeinde` ausgewählt werden."
@@ -263,11 +262,6 @@ with sf:
     )
     auslaender = st.slider(
         "Ausländer in %  (2019)", 0.0, 60.0, row["Ausländer in %  (2019)"]
-    )
-    jugend = st.slider("0-19 Jahre  (2019)", 0.0, 100.0, row["0-19 Jahre  (2019)"])
-    erwachsen = st.slider("20-64 Jahre  (2019)", 0.0, 100.0, row["0-19 Jahre  (2019)"])
-    senioren = st.slider(
-        "65 Jahre und mehr  (2019)", 0.0, 100.0, row["65 Jahre und mehr  (2019)"]
     )
     heirat = st.number_input(
         "Rohe Heiratssziffer  (2019)", 0.0, 37.0, row["Rohe Heiratssziffer  (2019)"]
@@ -321,6 +315,26 @@ with sf:
         100.0,
         float(row["Kleine Rechtsparteien  (2019)"]),
     )
+
+    jugend = st.slider("0-19 Jahre  (2019)", 0.0, 100.0, row["0-19 Jahre  (2019)"])
+    erwachsen = st.slider("20-64 Jahre  (2019)", 0.0, 100.0, row["0-19 Jahre  (2019)"])
+    senioren = st.slider(
+        "65 Jahre und mehr  (2019)", 0.0, 100.0, row["65 Jahre und mehr  (2019)"]
+    )
+
+    personenwerte = [jugend, erwachsen, senioren]
+    pers_text = ["0-19 Jahre", "20-64 Jahre", "65 Jahre und mehr"]
+    ges = sum(personenwerte)
+    # Skalierung durchführen (nur wenn Summe > 0)
+    if ges > 0:
+        skaliert_per = [(w / ges) * 100 for w in personenwerte]
+        # Optionale Anzeige
+        st.markdown("**Skalierte Alterverteilung (Summe = 100 %)**")
+        for name, wert in zip(pers_text, skaliert_per):
+            st.write(f"{name}: {wert:.2f} %")
+    else:
+        st.warning("Summe der Parteianteile ist 0 %. Bitte Werte setzen.")
+        skaliert_per = [0.0] * len(pers_text)
 
     # Liste aller Werte
     parteiwerte = [fdp, cvp, sp, svp, evp, glp, bdp, pda, gps, kleinrechts]
